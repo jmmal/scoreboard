@@ -1,28 +1,4 @@
-require 'net/http'
-require 'json'
-# url = URI.parse('http://api.sportradar.us/mlb-t6/games/2017/04/01/boxscore.json?api_key=mhp4jgscq9qpbq9a9et3k3bv')
-# req = Net::HTTP::Get.new(url.to_s)
-# res = Net::HTTP.start(url.host, url.port) {|http|
-# 	http.request(req)
-# }
-
-def printJSON(j)
-	@games = j["league"]["games"]
-	# puts JSON.pretty_generate(@games)
-	puts "---------------------------------------------------------"
-	@games.each do |key, value|
-
-		@home = key["game"]["home"]["name"]
-		@away = key["game"]["away"]["name"]
-		@home_score = key["game"]["home"]["runs"]
-		@away_score = key["game"]["away"]["runs"]
-		puts @home + " " + @home_score.to_s + " - " + @away + " " + @away_score.to_s
-		# puts JSON.pretty_generate(key["game"]["home"]["name"])
-	end
-	puts "---------------------------------------------------------"
-end
-
-scoreboardData = '{
+{
   "league": {
     "id": "2fa448bc-fc17-4d3d-be03-e60e080fdc26",
     "name": "Major League Baseball",
@@ -5822,7 +5798,3 @@ scoreboardData = '{
   },
   "_comment": "Generation started @ 2017-04-06 21:08:10 UTC ended @ 2017-04-06 21:08:13 UTC"
 }
-'
-
-output = JSON.parse(scoreboardData)
-printJSON(output)
