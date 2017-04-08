@@ -1,6 +1,22 @@
 require 'net/http'
 require 'json'
 
+class GetData
+  def initialise()
+    puts "Made object"
+  end
+
+  def make_request(date)
+  	url = URI.parse("http://api.sportradar.us/mlb-t6/games/#{date}/boxscore.json?api_key=mhp4jgscq9qpbq9a9et3k3bv")
+  	req = Net::HTTP::Get.new(url.to_s)
+  	res = Net::HTTP.start(url.host, url.port) {|http|
+  		http.request(req)
+  	}
+  	output = JSON.parse(res.body)
+    puts JSON.pretty_generate(output)
+  end
+end
+
 def print_games(games)
 	# @games = j["league"]["games"]
 	# puts JSON.pretty_generate(@games)
@@ -68,8 +84,8 @@ def print_line_score(game)
 	puts "+----------------+-----------------------------------------------+"
 end
 
-def make_request
-	url = URI.parse('http://api.sportradar.us/mlb-t6/games/2017/04/05/boxscore.json?api_key=mhp4jgscq9qpbq9a9et3k3bv')
+def make_request(date)
+	url = URI.parse("http://api.sportradar.us/mlb-t6/games/#{date}/boxscore.json?api_key=mhp4jgscq9qpbq9a9et3k3bv")
 	req = Net::HTTP::Get.new(url.to_s)
 	res = Net::HTTP.start(url.host, url.port) {|http|
 		http.request(req)
@@ -77,13 +93,17 @@ def make_request
 	output = JSON.parse(res.body)
 end
 
-scoreboard = make_request
-# puts JSON.pretty_generate(scoreboard)
-games = scoreboard["league"]["games"]
-# print_games(games)
 
-games.each do |game|
-	puts
-	print_line_score(game)
-	puts
-end
+# puts "Enter a date in format YYYY/MM/DD"
+# date = gets.chomp
+#
+# scoreboard = make_request(date)
+# # puts JSON.pretty_generate(scoreboard)
+# games = scoreboard["league"]["games"]
+# # print_games(games)
+#
+# games.each do |game|
+# 	puts
+# 	print_line_score(game)
+# 	puts
+# end
