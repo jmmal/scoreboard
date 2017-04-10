@@ -1,0 +1,7 @@
+%tr
+  %td= team_name(game, team)
+  - innings(game, team).each do |inning|
+    %td= inning["runs"]
+  %td= game["game"][team]["runs"]
+  %td= game["game"][team]["hits"]
+  %td= game["game"][team]["errors"]

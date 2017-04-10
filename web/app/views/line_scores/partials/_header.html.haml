@@ -1,0 +1,8 @@
+%thead
+  %tr
+    %td Team
+    - game["game"]["home"]["scoring"].each do |inning|
+      %td= inning["number"]
+    %td R
+    %td H
+    %td E
