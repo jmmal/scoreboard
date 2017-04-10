@@ -1,0 +1,44 @@
+-# %table#LineScores
+-#   %thead
+-#     %th Team
+-#     %th 0
+-#     %th 1
+-#     %th 2
+-#     %th 3
+-#     %th 4
+-#     %th 5
+-#     %th 6
+-#     %th 7
+-#     %th 8
+-#     %th 9
+-#     %th R
+-#     %th H
+-#     %th E
+
+- @output.each do |game|
+  %table
+    %thead
+      %tr
+        %td#name Team
+        - innings(game, "home").each do |inning|
+          %td= inning["number"]
+        %td R
+        %td H
+        %td E
+    %tbody
+      %tr
+        %td= home_name(game)
+        - innings(game, "home").each do |inning|
+          %td= inning["runs"]
+        %td= game["game"]["home"]["runs"]
+        %td= game["game"]["home"]["hits"]
+        %td= game["game"]["home"]["errors"]
+      %tr
+        %td= away_name(game)
+        - innings(game, "away").each do |inning|
+          %td= inning["runs"]
+        %td= game["game"]["away"]["runs"]
+        %td= game["game"]["away"]["hits"]
+        %td= game["game"]["away"]["errors"]
+  %p
+%p= @output
