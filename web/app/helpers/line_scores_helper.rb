@@ -7,4 +7,8 @@ module LineScoresHelper
     game["game"][homeaway]["scoring"]
   end
 
+  def HRE(game, team, hre)
+    game["game"][team][hre]
+  end
+
 end

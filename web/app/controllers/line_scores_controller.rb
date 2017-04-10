@@ -1,7 +1,9 @@
 class LineScoresController < ApplicationController
   helper :line_scores
   def index
-    puts params[:Date]
+    if params[:Date] == nil
+      params[:Date] = Date.yesterday().strftime("%Y/%m/%d")
+    end
     @h = LineScores.new
     @output = @h.index(params[:Date])
   end

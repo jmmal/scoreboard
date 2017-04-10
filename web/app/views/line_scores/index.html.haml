@@ -1,9 +1,0 @@
-%h1 Daily Gamescores
-
-= form_tag root_path, :method => :get do
-  Date:
-  = text_field_tag "Date"
-  = submit_tag "Submit"
-
-- @output.each do |game|
-  = render :partial => "line_scores/partials/line_score", :locals => {:game => game}
