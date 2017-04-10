@@ -38,6 +38,8 @@ GEM
     arel (6.0.4)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-datepicker-rails (1.6.4.1)
+      railties (>= 3.0)
     builder (3.2.3)
     byebug (9.0.6)
     coffee-rails (4.1.1)
@@ -150,7 +152,7 @@ GEM
     turbolinks-source (5.0.0)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
-    uglifier (3.1.13)
+    uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
     web-console (2.3.0)
       activemodel (>= 4.0)
@@ -162,6 +164,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-datepicker-rails
   byebug
   coffee-rails (~> 4.1.0)
   faraday (~> 0.12.0.1)
