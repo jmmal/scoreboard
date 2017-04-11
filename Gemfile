@@ -4,7 +4,7 @@ gem "haml"
 gem 'figaro'
 gem 'haml-rails'
 gem 'bootstrap-datepicker-rails'
-
+gem 'puma'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.8'
 # Use sqlite3 as the database for Active Record
