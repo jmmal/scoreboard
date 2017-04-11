@@ -4,11 +4,11 @@ gem "haml"
 gem 'figaro'
 gem 'haml-rails'
 gem 'bootstrap-datepicker-rails'
-gem 'rails_12factor'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.8'
 # Use sqlite3 as the database for Active Record
-
+gem 'pg'
 gem 'puma'
 
 # Use SCSS for stylesheets
@@ -51,5 +51,5 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
+gem 'rails_12factor', group: :production
 ruby '2.3.0'
