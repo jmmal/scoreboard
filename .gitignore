@@ -17,4 +17,4 @@
 /tmp
 
 /config/application.yml
-/config/secrets.yml
+.env
