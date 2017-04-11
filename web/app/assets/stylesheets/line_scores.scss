@@ -1,0 +1,59 @@
+// // Place all the styles related to the Line_Scores controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
+//
+// /* line 5, /Users/Josh/Development/scoreboard/web/app/assets/stylesheets/line_scores.scss */
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+table.linescore {
+  overflow-x: auto;
+}
+
+div.inline {
+  padding-right: 20px;
+  overflow-x: scroll;
+  width: 370px;
+}
+
+td.inning {
+  min-width: 20px;
+  min-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+td.names {
+  white-space: nowrap;
+  min-width: 120px;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+div.scoreboard {
+  height: 85px;
+  display: block;
+}
+
+div#line_scores {
+  display: inline-block;
+  margin-top: auto;
+}
+
+.inline, .totals {
+  float: left;
+}
+
+p {
+  margin-bottom: 5px;
+  margin-left: 3px;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}

@@ -1,0 +1,14 @@
+-# %div.scoreboard
+-#   %table
+-#     = render :partial => "line_scores/partials/header", :locals => {:game => game}
+-#     %tbody
+-#       = render :partial => "line_scores/partials/team", :locals => {:game => game, :team => "away"}
+-#       = render :partial => "line_scores/partials/team", :locals => {:game => game, :team => "home"}
+%div.scoreboard
+  - if complete(game)
+    %div.inline
+      %table.linescore
+        = render :partial => "line_scores/partials/linescore", :locals => {:game => game}
+    %div.totals
+      %table
+        = render :partial => "line_scores/partials/totals", :locals => {:game => game}

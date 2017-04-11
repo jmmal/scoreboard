@@ -1,0 +1,22 @@
+-# %thead
+-#   %tr
+-#     %td.name Team
+-#     - game["game"]["home"]["scoring"].each do |inning|
+-#       %td.innings= inning["number"]
+-#     %td.totals R
+-#     %td.totals H
+-#     %td.totals E
+%thead
+  %tr
+    %td.inning R
+    %td.inning H
+    %td.inning E
+%tbody
+  %tr.away
+    %td.inning= HRE(game, "away", "runs")
+    %td.inning= HRE(game, "away", "hits")
+    %td.inning= HRE(game, "away", "errors")
+  %tr.home
+    %td.inning= HRE(game, "home", "runs")
+    %td.inning= HRE(game, "home", "hits")
+    %td.inning= HRE(game, "home", "errors")
