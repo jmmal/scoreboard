@@ -15,12 +15,15 @@ table.linescore {
 
 div.inline {
   padding-right: 20px;
+  overflow-x: scroll;
+  width: 370px;
 }
 
 td.inning {
   min-width: 20px;
-  height: 20px;
-  align-items: center;
+  min-height: 20px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 td.names {
@@ -33,9 +36,15 @@ table, th, td {
 }
 
 .scoreboard {
-  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
 }
 
+div#line_scores {
+  display: inline-grid;
+  margin-top: auto;
+}
 
 .inline, .totals {
   float: left;

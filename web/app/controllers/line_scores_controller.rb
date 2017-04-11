@@ -3,6 +3,7 @@ class LineScoresController < ApplicationController
   def index
     if params[:Date] == nil
       params[:Date] = Date.yesterday().strftime("%Y/%m/%d")
+      puts params[:Date]
     end
     @h = LineScores.new
     @output = @h.index(params[:Date])
