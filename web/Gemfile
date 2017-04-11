@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem "haml"
-
+gem 'figaro'
 gem 'haml-rails'
 gem 'bootstrap-datepicker-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

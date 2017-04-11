@@ -9,7 +9,6 @@
 }
 
 table.linescore {
-  max-width: 300px;
   overflow-x: auto;
 }
 
@@ -35,19 +34,24 @@ table, th, td {
   border: 1px solid black;
 }
 
-.scoreboard {
-  margin-top: 10px;
-  margin-bottom: 10px;
+div.scoreboard {
+  height: 85px;
   display: block;
 }
 
 div#line_scores {
-  display: inline-grid;
+  display: inline-block;
   margin-top: auto;
 }
 
 .inline, .totals {
   float: left;
+}
+
+p {
+  margin-bottom: 5px;
+  margin-left: 3px;
+  padding: 0;
 }
 
 ul {

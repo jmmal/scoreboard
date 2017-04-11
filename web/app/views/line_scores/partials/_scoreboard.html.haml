@@ -4,7 +4,6 @@
 -#     %tbody
 -#       = render :partial => "line_scores/partials/team", :locals => {:game => game, :team => "away"}
 -#       = render :partial => "line_scores/partials/team", :locals => {:game => game, :team => "home"}
-%p= status(game)
 %div.scoreboard
   - if complete(game)
     %div.inline

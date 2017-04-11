@@ -7,4 +7,5 @@
 
 %div#line_scores
   - @output.each do |game|
+    %p= status(game)
     = render :partial => "line_scores/partials/scoreboard", :locals => {:game => game}
