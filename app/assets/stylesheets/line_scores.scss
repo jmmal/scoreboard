@@ -8,85 +8,173 @@
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-table.linescore {
-  overflow-x: auto;
-}
-
-div.inline {
-  padding-right: 20px;
-  overflow-x: scroll;
-  width: 370px;
-}
-
-td.inning {
-  min-width: 20px;
-  min-height: 20px;
-  text-align: center;
-  vertical-align: middle;
-}
-
-td.names {
-  white-space: nowrap;
-  min-width: 120px;
-  text-align: left;
-  padding-left: 3px;
-}
-
-table {
-  border: 1px solid black;
-}
-
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-}
-
-thead {
-  border-collapse: separate;
-  border-spacing: 0;
-  border-top: 1px solid red;
-}
-
-tbody {
-  border-collapse: separate;
-  border-spacing: 0;
-}
-
-#date_selector {
+div#header, div#date_selector {
   text-align: center;
 }
 
-div.scoreboard {
-  display: inline-block;
-  padding-bottom: 10px;
-  margin-right: 50px;
+table.linescore thead td, table.totals thead td {
+  border-bottom: 1px solid #8a8a8a;
+}
+
+table.linescore, table.totals {
+  border-bottom: 1px solid #8a8a8a;
 }
 
 div#line_scores {
-  display: inline-block;
-  margin-top: 15px;
   width: 100%;
   text-align: center;
 }
 
-.inline, .totals {
-  float: left;
+div.inline {
+  background-color: #f1f1f1
 }
 
-div#header {
+.inline table {
+  border-collapse: separate;
+  border: 0;
+  border-spacing: 0;
+}
+
+thead tr td {
+  border-collapse: separate;
+  border: 0;
+}
+
+tbody tr {
+  border-collapse: separate;
+  border: 0;
+}
+
+.scoreboard {
+  display: flex;
+  border: 1px solid #dcdcdc;
+}
+
+table.teams {
+  width: 130px;
+}
+
+table.teams thead td {
+  border-bottom: 1px solid #8a8a8a;
+}
+
+
+td.inning {
+  min-width: 23px;
+  min-height: 23px;
+}
+
+.linescore, .totals {
   text-align: center;
+  direction: ltr;
 }
 
-#calendar {
-  margin: auto;
+div.scrollable {
+  max-width: 198px;
+  direction: rtl;
+  overflow-x: scroll;
+  padding-right: 15px;
+}
+
+.game {
+  display: inline-block;
+  padding: 15px;
+  text-align: left;
 }
 
 p {
-  text-align: left;
-  margin-bottom: 5px;
-  padding-left: 3px;
+  padding-left: 5px;
+  margin: 0;
 }
-
-ul {
-  list-style-type: none;
-}
+// table.linescore {
+//   direction: ltr;
+//   padding-left: 0;
+// }
+//
+// div.inline {
+//   padding-right: 20px;
+//   overflow-x: scroll;
+//   width: 210px;
+//   direction: rtl;
+// }
+//
+// div.teams {
+//   margin-right: 0;
+// }
+//
+// td.inning {
+//   min-width: 20px;
+//   min-height: 20px;
+//   text-align: center;
+//   vertical-align: middle;
+// }
+//
+// .teams {
+//   display: inline-block;
+//   float: left;
+// }
+//
+// td.names {
+//   white-space: nowrap;
+//   min-width: 120px;
+//   text-align: left;
+//   padding-left: 3px;
+// }
+//
+// table.linescore, table.totals {
+//   border-top: 2px solid black;
+// }
+//
+// table {
+//   border-collapse: separate;
+//   border-spacing: 0;
+// }
+//
+// th {
+//   border-collapse: separate;
+//   border-spacing: 0;
+//   border-top: 2px solid black;
+// }
+//
+// tbody {
+//   border-collapse: separate;
+//   border-spacing: 0;
+// }
+//
+//
+// div#line_scores {
+//   display: inline-block;
+//   margin-top: 15px;
+//   width: 100%;
+//   text-align: center;
+// }
+//
+// .teams, .inline, .totals {
+//   float: left;
+// }
+//
+// div.scoreboard {
+//   display: inline-block;
+//   padding-bottom: 10px;
+//   margin-right: 50px;
+// }
+//
+//
+// .inline, .totals {
+//   float: left;
+// }
+//
+//
+// #calendar {
+//   margin: auto;
+// }
+//
+// p {
+//   text-align: left;
+//   margin-bottom: 5px;
+//   padding-left: 3px;
+// }
+//
+// ul {
+//   list-style-type: none;
+// }

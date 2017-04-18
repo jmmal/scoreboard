@@ -6,15 +6,12 @@
 -#   %td.totals= game["game"][team]["hits"]
 -#   %td.totals= game["game"][team]["errors"]
 %thead
-  %td.names Team
   - game["game"]["home"]["scoring"].each do |inning|
     %td.inning= inning["number"]
 %tbody
   %tr
-    %td.names= team_name(game, "away")
     - game["game"]["away"]["scoring"].each do |inning|
       %td.inning= inning["runs"]
   %tr
-    %td.names= team_name(game, "home")
     - game["game"]["home"]["scoring"].each do |inning|
       %td.inning= inning["runs"]
