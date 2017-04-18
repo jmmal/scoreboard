@@ -2,8 +2,9 @@
 
 = form_tag root_path, :method => :get do
   Date:
-  = text_field_tag "Date"
+  %input#dateselector{:type => "text", :name => "Date"}
   = submit_tag "Submit"
+
 
 %div#line_scores
   - @output.each do |game|
