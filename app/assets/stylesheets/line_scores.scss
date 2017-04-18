@@ -28,30 +28,63 @@ td.inning {
 td.names {
   white-space: nowrap;
   min-width: 120px;
+  text-align: left;
+  padding-left: 3px;
 }
 
-table, th, td {
+table {
   border: 1px solid black;
 }
 
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+thead {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-top: 1px solid red;
+}
+
+tbody {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+#date_selector {
+  text-align: center;
+}
+
 div.scoreboard {
-  height: 85px;
-  display: block;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-right: 50px;
 }
 
 div#line_scores {
   display: inline-block;
-  margin-top: auto;
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
 }
 
 .inline, .totals {
   float: left;
 }
 
+div#header {
+  text-align: center;
+}
+
+#calendar {
+  margin: auto;
+}
+
 p {
+  text-align: left;
   margin-bottom: 5px;
-  margin-left: 3px;
-  padding: 0;
+  padding-left: 3px;
 }
 
 ul {

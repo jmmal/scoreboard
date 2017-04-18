@@ -1,12 +1,13 @@
-%h1 Daily Gamescores
+%div#header
+  %h1 Daily Gamescores
 
-= form_tag root_path, :method => :get do
-  Date:
-  %input#dateselector{:type => "text", :name => "Date"}
-  = submit_tag "Submit"
+%div#date_selector
+  = form_tag root_path, :method => :get do
+    Date:
+    %input#calendar{:type => "text", :name => "Date"}
+    = submit_tag "Submit"
 
 
 %div#line_scores
   - @output.each do |game|
-    %p= status(game)
     = render :partial => "line_scores/partials/scoreboard", :locals => {:game => game}
